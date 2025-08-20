@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.sx.spyglass.model.AppPort">
+		<field name="appPortId" type="long" />
+		<field name="scienceAppId" type="long" />
+		<field name="dataTypeId" type="long" />
+		<field name="optionName" type="String" />
+		<field name="portType" type="String" />
+	</model>
+	<model name="com.sx.spyglass.model.ScienceApp">
+		<field name="uuid" type="String" />
+		<field name="scienceAppId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="status" type="int" />
+		<field name="statusByUserId" type="long" />
+		<field name="statusByUserName" type="String" />
+		<field name="statusDate" type="Date" />
+		<field name="lastPublishDate" type="Date" />
+		<field name="appName" type="String" />
+		<field name="appVersion" type="String" />
+		<field name="appType" type="String" />
+		<field name="exeFileName" type="String" />
+		<field localized="true" name="displayName" type="String" />
+		<field localized="true" name="description" type="String" />
+		<field name="startScript" type="String" />
+		<field name="finishScript" type="String" />
+	</model>
+</model-hints>

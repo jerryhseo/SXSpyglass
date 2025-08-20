@@ -1,0 +1,10 @@
+Bundle-Name: SXSpyglass-api
+Bundle-SymbolicName: com.sx.spyglass.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.sx.spyglass.exception,\
+	com.sx.spyglass.model,\
+	com.sx.spyglass.service,\
+	com.sx.spyglass.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../SXSpyglass-service/service.xml
