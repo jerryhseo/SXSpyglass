@@ -20,6 +20,9 @@ import com.liferay.portal.kernel.json.JSONFactoryUtil;
 import com.liferay.portal.kernel.json.JSONObject;
 import com.sx.spyglass.service.base.ScienceAppLocalServiceBaseImpl;
 
+import java.io.UnsupportedEncodingException;
+import java.nio.charset.StandardCharsets;
+
 import org.osgi.service.component.annotations.Component;
 
 /**
@@ -38,7 +41,7 @@ public class ScienceAppLocalServiceImpl extends ScienceAppLocalServiceBaseImpl {
 		item.put( "id", 123456);
 		JSONObject displayName = JSONFactoryUtil.createJSONObject();
 		displayName.put("en-US", "Text Viewer");
-		displayName.put("ko-KR", "텍스트 뷰어");
+		displayName.put("ko-KR", "Text Viewer");
 		item.put( "displayName", displayName);
 		availables.put(item);
 		
@@ -46,7 +49,7 @@ public class ScienceAppLocalServiceImpl extends ScienceAppLocalServiceBaseImpl {
 		item.put( "id", 234567);
 		displayName = JSONFactoryUtil.createJSONObject();
 		displayName.put("en-US", "Structured Data Editor");
-		displayName.put("ko-KR", "구조데이터 편집기");
+		displayName.put("ko-KR", "Structured Data Editor");
 		item.put( "displayName", displayName);
 		availables.put(item);
 		
@@ -54,7 +57,7 @@ public class ScienceAppLocalServiceImpl extends ScienceAppLocalServiceBaseImpl {
 		item.put( "id", 345678);
 		displayName = JSONFactoryUtil.createJSONObject();
 		displayName.put("en-US", "Image Viewer");
-		displayName.put("ko-KR", "이미지 뷰어");
+		displayName.put("ko-KR", "Image Viewer");
 		item.put( "displayName", displayName);
 		availables.put(item);
 		
@@ -62,7 +65,7 @@ public class ScienceAppLocalServiceImpl extends ScienceAppLocalServiceBaseImpl {
 		item.put( "id", 456789);
 		displayName = JSONFactoryUtil.createJSONObject();
 		displayName.put("en-US", "Text Editor");
-		displayName.put("ko-KR", "텍스트 편집기");
+		displayName.put("ko-KR", "Text Editor");
 		item.put( "displayName", displayName);
 		availables.put(item);
 		
@@ -70,10 +73,61 @@ public class ScienceAppLocalServiceImpl extends ScienceAppLocalServiceBaseImpl {
 		item.put( "id", 567890);
 		displayName = JSONFactoryUtil.createJSONObject();
 		displayName.put("en-US", "Image Editor");
-		displayName.put("ko-KR", "이미지 편집기");
+		displayName.put("ko-KR", "Image Editor");
 		item.put( "displayName", displayName);
 		availables.put(item);
 		
 		return availables;
+	}
+	
+	public JSONObject getPseudoScienceApp( int scienceAppId) {
+		JSONObject item = JSONFactoryUtil.createJSONObject();
+		JSONObject displayName = JSONFactoryUtil.createJSONObject();
+		
+		switch( scienceAppId ) {
+			case 123456:{
+				item.put( "id", 123456);
+				
+				displayName.put("en-US", "Text Viewer");
+				displayName.put("ko-KR", "Text Viewer");
+				item.put( "displayName", displayName);
+				
+				break;
+			}
+			case 234567:{
+				item.put( "id", 234567);
+				displayName.put("en-US", "Structured Data Editor");
+				displayName.put("ko-KR", "Structured Data Editor");
+				item.put( "displayName", displayName);
+				
+				break;
+			}
+			case 345678:{
+				item.put( "id", 345678);
+				displayName.put("en-US", "Image Viewer");
+				displayName.put("ko-KR", "Image Viewer");
+				item.put( "displayName", displayName);
+				
+				break;
+			}
+			case 456789:{
+				item.put( "id", 456789);
+				displayName.put("en-US", "Text Editor");
+				displayName.put("ko-KR", "Text Editor");
+				item.put( "displayName", displayName);
+				
+				break;
+			}
+			case 567890:{
+				item.put( "id", 567890);
+				displayName.put("en-US", "Image Editor");
+				displayName.put("ko-KR", "Image Editor");
+				item.put( "displayName", displayName);
+				
+				break;
+			}
+		}
+		
+		return item;
 	}
 }

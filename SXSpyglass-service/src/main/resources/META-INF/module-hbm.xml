@@ -4,7 +4,7 @@
 <hibernate-mapping auto-import="false" default-lazy="false">
 	<import class="com.sx.spyglass.model.AppPort" />
 	<import class="com.sx.spyglass.model.ScienceApp" />
-	<class name="com.sx.spyglass.model.impl.AppPortImpl" table="FOO_AppPort">
+	<class name="com.sx.spyglass.model.impl.AppPortImpl" table="SXSpyglass_AppPort">
 		<id access="com.liferay.portal.dao.orm.hibernate.LiferayPropertyAccessor" name="appPortId" type="long">
 			<generator class="assigned" />
 		</id>
@@ -13,7 +13,7 @@
 		<property access="com.liferay.portal.dao.orm.hibernate.LiferayPropertyAccessor" name="optionName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
 		<property access="com.liferay.portal.dao.orm.hibernate.LiferayPropertyAccessor" name="portType" type="com.liferay.portal.dao.orm.hibernate.StringType" />
 	</class>
-	<class name="com.sx.spyglass.model.impl.ScienceAppImpl" table="FOO_ScienceApp">
+	<class name="com.sx.spyglass.model.impl.ScienceAppImpl" table="SXSpyglass_ScienceApp">
 		<id access="com.liferay.portal.dao.orm.hibernate.LiferayPropertyAccessor" name="scienceAppId" type="long">
 			<generator class="assigned" />
 		</id>

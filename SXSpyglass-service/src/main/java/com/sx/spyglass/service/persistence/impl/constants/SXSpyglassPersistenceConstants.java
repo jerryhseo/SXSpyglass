@@ -18,7 +18,7 @@ package com.sx.spyglass.service.persistence.impl.constants;
  * @author Brian Wing Shun Chan
  * @generated
  */
-public class FOOPersistenceConstants {
+public class SXSpyglassPersistenceConstants {
 
 	public static final String BUNDLE_SYMBOLIC_NAME = "com.sx.spyglass.service";
 

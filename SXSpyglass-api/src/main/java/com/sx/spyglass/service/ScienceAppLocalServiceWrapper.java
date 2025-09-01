@@ -263,6 +263,13 @@ public class ScienceAppLocalServiceWrapper
 		return _scienceAppLocalService.getPersistedModel(primaryKeyObj);
 	}
 
+	@Override
+	public com.liferay.portal.kernel.json.JSONObject getPseudoScienceApp(
+		int scienceAppId) {
+
+		return _scienceAppLocalService.getPseudoScienceApp(scienceAppId);
+	}
+
 	/**
 	 * Returns the science app with the primary key.
 	 *

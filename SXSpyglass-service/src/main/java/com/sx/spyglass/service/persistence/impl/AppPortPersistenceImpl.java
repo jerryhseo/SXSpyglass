@@ -39,7 +39,7 @@ import com.sx.spyglass.model.impl.AppPortImpl;
 import com.sx.spyglass.model.impl.AppPortModelImpl;
 import com.sx.spyglass.service.persistence.AppPortPersistence;
 import com.sx.spyglass.service.persistence.AppPortUtil;
-import com.sx.spyglass.service.persistence.impl.constants.FOOPersistenceConstants;
+import com.sx.spyglass.service.persistence.impl.constants.SXSpyglassPersistenceConstants;
 
 import java.io.Serializable;
 
@@ -2425,7 +2425,7 @@ public class AppPortPersistenceImpl
 
 	@Override
 	@Reference(
-		target = FOOPersistenceConstants.SERVICE_CONFIGURATION_FILTER,
+		target = SXSpyglassPersistenceConstants.SERVICE_CONFIGURATION_FILTER,
 		unbind = "-"
 	)
 	public void setConfiguration(Configuration configuration) {
@@ -2439,7 +2439,7 @@ public class AppPortPersistenceImpl
 
 	@Override
 	@Reference(
-		target = FOOPersistenceConstants.ORIGIN_BUNDLE_SYMBOLIC_NAME_FILTER,
+		target = SXSpyglassPersistenceConstants.ORIGIN_BUNDLE_SYMBOLIC_NAME_FILTER,
 		unbind = "-"
 	)
 	public void setDataSource(DataSource dataSource) {
@@ -2448,7 +2448,7 @@ public class AppPortPersistenceImpl
 
 	@Override
 	@Reference(
-		target = FOOPersistenceConstants.ORIGIN_BUNDLE_SYMBOLIC_NAME_FILTER,
+		target = SXSpyglassPersistenceConstants.ORIGIN_BUNDLE_SYMBOLIC_NAME_FILTER,
 		unbind = "-"
 	)
 	public void setSessionFactory(SessionFactory sessionFactory) {
