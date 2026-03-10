@@ -1,8 +1,6 @@
 Bundle-Name: SXSpyglass-service
 Bundle-SymbolicName: com.sx.spyglass.service
-Bundle-Version: 0.1.0
+Bundle-Version: 0.2.0
 Liferay-Require-SchemaVersion: 1.0.0
 Liferay-Service: true
 -dsannotations-options: inherit
-
-Include-Resource:: @commons-lang3-3.12.0.jar

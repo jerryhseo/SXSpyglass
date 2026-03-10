@@ -1,15 +1,6 @@
 /**
- * Copyright (c) 2000-present Liferay, Inc. All rights reserved.
- *
- * This library is free software; you can redistribute it and/or modify it under
- * the terms of the GNU Lesser General Public License as published by the Free
- * Software Foundation; either version 2.1 of the License, or (at your option)
- * any later version.
- *
- * This library is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
- * details.
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 package com.sx.spyglass.model.impl;
@@ -202,34 +193,40 @@ public class AppPortModelImpl
 
 	private static final Map<String, Function<AppPort, Object>>
 		_attributeGetterFunctions;
-	private static final Map<String, BiConsumer<AppPort, Object>>
-		_attributeSetterBiConsumers;
 
 	static {
 		Map<String, Function<AppPort, Object>> attributeGetterFunctions =
 			new LinkedHashMap<String, Function<AppPort, Object>>();
-		Map<String, BiConsumer<AppPort, ?>> attributeSetterBiConsumers =
-			new LinkedHashMap<String, BiConsumer<AppPort, ?>>();
 
 		attributeGetterFunctions.put("appPortId", AppPort::getAppPortId);
-		attributeSetterBiConsumers.put(
-			"appPortId", (BiConsumer<AppPort, Long>)AppPort::setAppPortId);
 		attributeGetterFunctions.put("scienceAppId", AppPort::getScienceAppId);
-		attributeSetterBiConsumers.put(
-			"scienceAppId",
-			(BiConsumer<AppPort, Long>)AppPort::setScienceAppId);
 		attributeGetterFunctions.put("dataTypeId", AppPort::getDataTypeId);
-		attributeSetterBiConsumers.put(
-			"dataTypeId", (BiConsumer<AppPort, Long>)AppPort::setDataTypeId);
 		attributeGetterFunctions.put("optionName", AppPort::getOptionName);
-		attributeSetterBiConsumers.put(
-			"optionName", (BiConsumer<AppPort, String>)AppPort::setOptionName);
 		attributeGetterFunctions.put("portType", AppPort::getPortType);
-		attributeSetterBiConsumers.put(
-			"portType", (BiConsumer<AppPort, String>)AppPort::setPortType);
 
 		_attributeGetterFunctions = Collections.unmodifiableMap(
 			attributeGetterFunctions);
+	}
+
+	private static final Map<String, BiConsumer<AppPort, Object>>
+		_attributeSetterBiConsumers;
+
+	static {
+		Map<String, BiConsumer<AppPort, ?>> attributeSetterBiConsumers =
+			new LinkedHashMap<String, BiConsumer<AppPort, ?>>();
+
+		attributeSetterBiConsumers.put(
+			"appPortId", (BiConsumer<AppPort, Long>)AppPort::setAppPortId);
+		attributeSetterBiConsumers.put(
+			"scienceAppId",
+			(BiConsumer<AppPort, Long>)AppPort::setScienceAppId);
+		attributeSetterBiConsumers.put(
+			"dataTypeId", (BiConsumer<AppPort, Long>)AppPort::setDataTypeId);
+		attributeSetterBiConsumers.put(
+			"optionName", (BiConsumer<AppPort, String>)AppPort::setOptionName);
+		attributeSetterBiConsumers.put(
+			"portType", (BiConsumer<AppPort, String>)AppPort::setPortType);
+
 		_attributeSetterBiConsumers = Collections.unmodifiableMap(
 			(Map)attributeSetterBiConsumers);
 	}

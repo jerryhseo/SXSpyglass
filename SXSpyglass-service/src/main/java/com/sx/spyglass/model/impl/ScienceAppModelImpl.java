@@ -1,15 +1,6 @@
 /**
- * Copyright (c) 2000-present Liferay, Inc. All rights reserved.
- *
- * This library is free software; you can redistribute it and/or modify it under
- * the terms of the GNU Lesser General Public License as published by the Free
- * Software Foundation; either version 2.1 of the License, or (at your option)
- * any later version.
- *
- * This library is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
- * FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more
- * details.
+ * SPDX-FileCopyrightText: (c) 2026 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
  */
 
 package com.sx.spyglass.model.impl;
@@ -316,102 +307,108 @@ public class ScienceAppModelImpl
 
 	private static final Map<String, Function<ScienceApp, Object>>
 		_attributeGetterFunctions;
-	private static final Map<String, BiConsumer<ScienceApp, Object>>
-		_attributeSetterBiConsumers;
 
 	static {
 		Map<String, Function<ScienceApp, Object>> attributeGetterFunctions =
 			new LinkedHashMap<String, Function<ScienceApp, Object>>();
+
+		attributeGetterFunctions.put("uuid", ScienceApp::getUuid);
+		attributeGetterFunctions.put(
+			"scienceAppId", ScienceApp::getScienceAppId);
+		attributeGetterFunctions.put("groupId", ScienceApp::getGroupId);
+		attributeGetterFunctions.put("companyId", ScienceApp::getCompanyId);
+		attributeGetterFunctions.put("userId", ScienceApp::getUserId);
+		attributeGetterFunctions.put("userName", ScienceApp::getUserName);
+		attributeGetterFunctions.put("createDate", ScienceApp::getCreateDate);
+		attributeGetterFunctions.put(
+			"modifiedDate", ScienceApp::getModifiedDate);
+		attributeGetterFunctions.put("status", ScienceApp::getStatus);
+		attributeGetterFunctions.put(
+			"statusByUserId", ScienceApp::getStatusByUserId);
+		attributeGetterFunctions.put(
+			"statusByUserName", ScienceApp::getStatusByUserName);
+		attributeGetterFunctions.put("statusDate", ScienceApp::getStatusDate);
+		attributeGetterFunctions.put(
+			"lastPublishDate", ScienceApp::getLastPublishDate);
+		attributeGetterFunctions.put("appName", ScienceApp::getAppName);
+		attributeGetterFunctions.put("appVersion", ScienceApp::getAppVersion);
+		attributeGetterFunctions.put("appType", ScienceApp::getAppType);
+		attributeGetterFunctions.put("exeFileName", ScienceApp::getExeFileName);
+		attributeGetterFunctions.put("displayName", ScienceApp::getDisplayName);
+		attributeGetterFunctions.put("description", ScienceApp::getDescription);
+		attributeGetterFunctions.put("startScript", ScienceApp::getStartScript);
+		attributeGetterFunctions.put(
+			"finishScript", ScienceApp::getFinishScript);
+
+		_attributeGetterFunctions = Collections.unmodifiableMap(
+			attributeGetterFunctions);
+	}
+
+	private static final Map<String, BiConsumer<ScienceApp, Object>>
+		_attributeSetterBiConsumers;
+
+	static {
 		Map<String, BiConsumer<ScienceApp, ?>> attributeSetterBiConsumers =
 			new LinkedHashMap<String, BiConsumer<ScienceApp, ?>>();
 
-		attributeGetterFunctions.put("uuid", ScienceApp::getUuid);
 		attributeSetterBiConsumers.put(
 			"uuid", (BiConsumer<ScienceApp, String>)ScienceApp::setUuid);
-		attributeGetterFunctions.put(
-			"scienceAppId", ScienceApp::getScienceAppId);
 		attributeSetterBiConsumers.put(
 			"scienceAppId",
 			(BiConsumer<ScienceApp, Long>)ScienceApp::setScienceAppId);
-		attributeGetterFunctions.put("groupId", ScienceApp::getGroupId);
 		attributeSetterBiConsumers.put(
 			"groupId", (BiConsumer<ScienceApp, Long>)ScienceApp::setGroupId);
-		attributeGetterFunctions.put("companyId", ScienceApp::getCompanyId);
 		attributeSetterBiConsumers.put(
 			"companyId",
 			(BiConsumer<ScienceApp, Long>)ScienceApp::setCompanyId);
-		attributeGetterFunctions.put("userId", ScienceApp::getUserId);
 		attributeSetterBiConsumers.put(
 			"userId", (BiConsumer<ScienceApp, Long>)ScienceApp::setUserId);
-		attributeGetterFunctions.put("userName", ScienceApp::getUserName);
 		attributeSetterBiConsumers.put(
 			"userName",
 			(BiConsumer<ScienceApp, String>)ScienceApp::setUserName);
-		attributeGetterFunctions.put("createDate", ScienceApp::getCreateDate);
 		attributeSetterBiConsumers.put(
 			"createDate",
 			(BiConsumer<ScienceApp, Date>)ScienceApp::setCreateDate);
-		attributeGetterFunctions.put(
-			"modifiedDate", ScienceApp::getModifiedDate);
 		attributeSetterBiConsumers.put(
 			"modifiedDate",
 			(BiConsumer<ScienceApp, Date>)ScienceApp::setModifiedDate);
-		attributeGetterFunctions.put("status", ScienceApp::getStatus);
 		attributeSetterBiConsumers.put(
 			"status", (BiConsumer<ScienceApp, Integer>)ScienceApp::setStatus);
-		attributeGetterFunctions.put(
-			"statusByUserId", ScienceApp::getStatusByUserId);
 		attributeSetterBiConsumers.put(
 			"statusByUserId",
 			(BiConsumer<ScienceApp, Long>)ScienceApp::setStatusByUserId);
-		attributeGetterFunctions.put(
-			"statusByUserName", ScienceApp::getStatusByUserName);
 		attributeSetterBiConsumers.put(
 			"statusByUserName",
 			(BiConsumer<ScienceApp, String>)ScienceApp::setStatusByUserName);
-		attributeGetterFunctions.put("statusDate", ScienceApp::getStatusDate);
 		attributeSetterBiConsumers.put(
 			"statusDate",
 			(BiConsumer<ScienceApp, Date>)ScienceApp::setStatusDate);
-		attributeGetterFunctions.put(
-			"lastPublishDate", ScienceApp::getLastPublishDate);
 		attributeSetterBiConsumers.put(
 			"lastPublishDate",
 			(BiConsumer<ScienceApp, Date>)ScienceApp::setLastPublishDate);
-		attributeGetterFunctions.put("appName", ScienceApp::getAppName);
 		attributeSetterBiConsumers.put(
 			"appName", (BiConsumer<ScienceApp, String>)ScienceApp::setAppName);
-		attributeGetterFunctions.put("appVersion", ScienceApp::getAppVersion);
 		attributeSetterBiConsumers.put(
 			"appVersion",
 			(BiConsumer<ScienceApp, String>)ScienceApp::setAppVersion);
-		attributeGetterFunctions.put("appType", ScienceApp::getAppType);
 		attributeSetterBiConsumers.put(
 			"appType", (BiConsumer<ScienceApp, String>)ScienceApp::setAppType);
-		attributeGetterFunctions.put("exeFileName", ScienceApp::getExeFileName);
 		attributeSetterBiConsumers.put(
 			"exeFileName",
 			(BiConsumer<ScienceApp, String>)ScienceApp::setExeFileName);
-		attributeGetterFunctions.put("displayName", ScienceApp::getDisplayName);
 		attributeSetterBiConsumers.put(
 			"displayName",
 			(BiConsumer<ScienceApp, String>)ScienceApp::setDisplayName);
-		attributeGetterFunctions.put("description", ScienceApp::getDescription);
 		attributeSetterBiConsumers.put(
 			"description",
 			(BiConsumer<ScienceApp, String>)ScienceApp::setDescription);
-		attributeGetterFunctions.put("startScript", ScienceApp::getStartScript);
 		attributeSetterBiConsumers.put(
 			"startScript",
 			(BiConsumer<ScienceApp, String>)ScienceApp::setStartScript);
-		attributeGetterFunctions.put(
-			"finishScript", ScienceApp::getFinishScript);
 		attributeSetterBiConsumers.put(
 			"finishScript",
 			(BiConsumer<ScienceApp, String>)ScienceApp::setFinishScript);
 
-		_attributeGetterFunctions = Collections.unmodifiableMap(
-			attributeGetterFunctions);
 		_attributeSetterBiConsumers = Collections.unmodifiableMap(
 			(Map)attributeSetterBiConsumers);
 	}
