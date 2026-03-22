@@ -329,6 +329,10 @@ public class ScienceAppLocalServiceUtil {
 		return getService().getScienceAppsCount();
 	}
 
+	public static long getStructuredDataEditorId() {
+		return getService().getStructuredDataEditorId();
+	}
+
 	/**
 	 * Updates the science app in the database or adds it if it does not yet exist. Also notifies the appropriate model listeners.
 	 *
